@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: yapmarket
+    runtime: node
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: DATABASE_URL
+        sync: false
+      - key: NEXTAUTH_SECRET
+        sync: false
+      - key: NEXTAUTH_URL
+        sync: false
+    healthCheckPath: /
+    autoDeploy: true 

@@ -17,14 +17,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="h-full">
-      <body className={`${inter.className} min-h-full bg-black text-white antialiased`} suppressHydrationWarning>
+      <body className={`${inter.className} min-h-full bg-white text-gray-900 antialiased`} suppressHydrationWarning>
         <Toaster
           position="top-right"
           toastOptions={{
             style: {
-              background: '#1F2937',
-              color: '#fff',
-              border: '1px solid #374151',
+              background: '#fff',
+              color: '#111827',
+              border: '1px solid #E5E7EB',
             },
             success: {
               iconTheme: {

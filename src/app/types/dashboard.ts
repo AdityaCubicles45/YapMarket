@@ -1,36 +1,27 @@
 export interface Badge {
   id: string;
-  yapperId: string;
-  typeId: string;
-  assignedAt: string;
-  type: {
-    id: string;
-    name: string;
-    description: string;
-  };
+  type: BadgeType;
 }
 
-export interface SubmissionData {
+export interface BadgeType {
+  name: string;
+  description: string;
+}
+
+export interface Submission {
+  id: string;
   date: string;
-  successful: number;
-  total: number;
+  success: boolean;
 }
 
 export interface Yapper {
-  id: string;
   username: string;
-  email: string;
-  bio?: string;
+  profileImage: string | null;
   totalSubmissions: number;
   successfulSubmissions: number;
-  rejectedSubmissions: number;
   currentStreak: number;
-  longestStreak: number;
-  lastActive: string | null;
   badges: Badge[];
-  submissions: SubmissionData[];
-  profileImage?: string | null;
-  emailNotifications: boolean;
+  submissions: Submission[];
 }
 
 export interface ComparisonUser {
