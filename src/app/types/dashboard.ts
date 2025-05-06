@@ -19,6 +19,7 @@ export interface Yapper {
   profileImage: string | null;
   totalSubmissions: number;
   successfulSubmissions: number;
+  rejectedSubmissions: number;
   currentStreak: number;
   badges: Badge[];
   submissions: Submission[];
