@@ -20,7 +20,7 @@ export default function StatsCards({ yapper, reputationScore }: StatsCardsProps)
       >
         <div className="flex items-center justify-between">
           <div>
-            <p className="text-foreground/90 text-sm font-medium">Reputation Score</p>
+            <p className="text-foreground/90 text-sm text-white font-medium">Reputation Score</p>
             <p className="text-4xl font-bold text-foreground mt-1">{reputationScore}</p>
           </div>
           <div className="h-12 w-12 bg-blue-50 dark:bg-blue-900/20 rounded-full flex items-center justify-center">
@@ -35,7 +35,7 @@ export default function StatsCards({ yapper, reputationScore }: StatsCardsProps)
       >
         <div className="flex items-center justify-between">
           <div>
-            <p className="text-foreground/90 text-sm font-medium">Success Rate</p>
+            <p className="text-foreground/90 text-sm text-white font-medium">Success Rate</p>
             <p className="text-4xl font-bold text-foreground mt-1">{successRate}%</p>
           </div>
           <div className="h-12 w-12 bg-green-50 dark:bg-green-900/20 rounded-full flex items-center justify-center">
@@ -50,7 +50,7 @@ export default function StatsCards({ yapper, reputationScore }: StatsCardsProps)
       >
         <div className="flex items-center justify-between">
           <div>
-            <p className="text-foreground/90 text-sm font-medium">Current Streak</p>
+            <p className="text-foreground/90 text-sm text-white font-medium">Current Streak</p>
             <p className="text-4xl font-bold text-foreground mt-1">{yapper.currentStreak} days</p>
           </div>
           <div className="h-12 w-12 bg-orange-50 dark:bg-orange-900/20 rounded-full flex items-center justify-center">

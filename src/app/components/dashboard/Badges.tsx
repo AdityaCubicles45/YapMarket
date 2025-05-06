@@ -15,8 +15,8 @@ export default function Badges({ yapper }: BadgesProps) {
       <h2 className="text-xl font-semibold mb-6 text-foreground">Badges Earned</h2>
       {yapper.badges.length === 0 ? (
         <div className="p-6 bg-gray-50 dark:bg-gray-700/50 rounded-lg text-center">
-          <TrophyIcon className="h-12 w-12 text-gray-500 dark:text-gray-400 mx-auto mb-4" />
-          <p className="text-foreground/90">
+          <TrophyIcon className="h-12 w-12 text-white dark:text-gray-400 mx-auto mb-4" />
+          <p className="text-foreground/90 text-white">
             No badges earned yet. Keep submitting to earn badges!
           </p>
         </div>

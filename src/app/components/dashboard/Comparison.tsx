@@ -36,13 +36,13 @@ export default function Comparison({ users }: ComparisonProps) {
             </div>
             <div className="space-y-3">
               <div className="flex justify-between items-center p-2 bg-white dark:bg-gray-800 rounded-lg">
-                <span className="text-sm text-foreground/90">Successful Submissions</span>
+                <span className="text-sm text-foreground/90 text-white">Successful Submissions</span>
                 <span className="font-medium text-foreground">
                   {user.successfulSubmissions}
                 </span>
               </div>
               <div className="flex justify-between items-center p-2 bg-white dark:bg-gray-800 rounded-lg">
-                <span className="text-sm text-foreground/90">Current Streak</span>
+                <span className="text-sm text-foreground/90 text-white">Current Streak</span>
                 <span className="font-medium text-foreground">
                   {user.currentStreak} days
                 </span>

@@ -19,7 +19,7 @@ export default function DashboardPage() {
                     </div>
                     <div className="ml-5 w-0 flex-1">
                       <dl>
-                        <dt className="truncate text-sm font-medium text-gray-500">Total Submissions</dt>
+                        <dt className="truncate text-sm font-medium text-white">Total Submissions</dt>
                         <dd className="text-lg font-medium text-gray-900">0</dd>
                       </dl>
                     </div>
@@ -38,7 +38,7 @@ export default function DashboardPage() {
                     </div>
                     <div className="ml-5 w-0 flex-1">
                       <dl>
-                        <dt className="truncate text-sm font-medium text-gray-500">Reputation Score</dt>
+                        <dt className="truncate text-sm font-medium text-white">Reputation Score</dt>
                         <dd className="text-lg font-medium text-gray-900">0</dd>
                       </dl>
                     </div>
@@ -57,7 +57,7 @@ export default function DashboardPage() {
                     </div>
                     <div className="ml-5 w-0 flex-1">
                       <dl>
-                        <dt className="truncate text-sm font-medium text-gray-500">Current Streak</dt>
+                        <dt className="truncate text-sm font-medium text-white">Current Streak</dt>
                         <dd className="text-lg font-medium text-gray-900">0 days</dd>
                       </dl>
                     </div>

@@ -16,21 +16,21 @@ export default function SubmissionStats({ yapper }: SubmissionStatsProps) {
       <div className="space-y-6">
         <div className="flex items-center justify-between p-4 bg-gray-50 dark:bg-gray-700/50 rounded-lg">
           <div>
-            <p className="text-foreground/90 text-sm">Total Submissions</p>
+            <p className="text-foreground/90 text-white text-sm">Total Submissions</p>
             <p className="text-2xl font-bold text-foreground mt-1">{yapper.totalSubmissions}</p>
           </div>
           <ArrowTrendingUpIcon className="h-6 w-6 text-gray-600 dark:text-gray-400" />
         </div>
         <div className="flex items-center justify-between p-4 bg-green-50 dark:bg-green-900/20 rounded-lg">
           <div>
-            <p className="text-foreground/90 text-sm">Successful Submissions</p>
+            <p className="text-foreground/90 text-white text-sm">Successful Submissions</p>
             <p className="text-2xl font-bold text-foreground mt-1">{yapper.successfulSubmissions}</p>
           </div>
           <ChartBarIcon className="h-6 w-6 text-green-600 dark:text-green-400" />
         </div>
         <div className="flex items-center justify-between p-4 bg-red-50 dark:bg-red-900/20 rounded-lg">
           <div>
-            <p className="text-foreground/90 text-sm">Rejected Submissions</p>
+            <p className="text-foreground/90 text-white text-sm">Rejected Submissions</p>
             <p className="text-2xl font-bold text-foreground mt-1">{yapper.rejectedSubmissions}</p>
           </div>
           <ChartBarIcon className="h-6 w-6 text-red-600 dark:text-red-400" />
