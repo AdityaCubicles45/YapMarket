@@ -1,0 +1,68 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Yapper {
+  id                    String       @id @default(cuid())
+  username              String       @unique
+  email                 String       @unique
+  bio                   String?      @db.Text
+  profileImage          String?
+  emailNotifications    Boolean      @default(true)
+  totalSubmissions      Int          @default(0)
+  successfulSubmissions Int          @default(0)
+  rejectedSubmissions   Int          @default(0)
+  currentStreak         Int          @default(0)
+  longestStreak         Int          @default(0)
+  lastActive            DateTime?
+  createdAt            DateTime     @default(now())
+  updatedAt            DateTime     @updatedAt
+  badges               Badge[]
+  submissions          Submission[]
+}
+
+model Badge {
+  id          String   @id @default(cuid())
+  yapperId    String
+  typeId      String
+  assignedAt  DateTime @default(now())
+  
+  // Relationships
+  yapper      Yapper   @relation(fields: [yapperId], references: [id])
+  type        BadgeType @relation(fields: [typeId], references: [id])
+}
+
+model BadgeType {
+  id          String   @id @default(cuid())
+  name        String   @unique
+  description String
+  
+  // Relationships
+  badges      Badge[]
+}
+
+model Submission {
+  id          String   @id @default(cuid())
+  yapperId    String
+  status      SubmissionStatus
+  createdAt   DateTime @default(now())
+  
+  // Relationship with Yapper
+  yapper      Yapper   @relation(fields: [yapperId], references: [id])
+}
+
+enum SubmissionStatus {
+  SUCCESS
+  REJECTED
+}
